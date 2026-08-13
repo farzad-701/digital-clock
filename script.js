@@ -1,4 +1,3 @@
-// برای ساعت زنده (دیجیتال)
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
