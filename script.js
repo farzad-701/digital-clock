@@ -10,7 +10,12 @@ function updateClock() {
 
     document.getElementById('time').textContent = `${strHours}:${minutes}`;
     document.querySelector('.ampm').textContent = ampm;
+
+    /* ترفند طلایی برای دقیق‌ترین ثانیه‌شماری!
+       به جای setInterval که ممکن است تاخیر داشته باشد، 
+       دقیقاً محاسبه می‌کنیم چه زمانی ثانیه بعدی شروع می‌شود */
+    const nextTick = 1000 - now.getMilliseconds();
+    setTimeout(updateClock, nextTick);
 }
 
-setInterval(updateClock, 1000);
 updateClock();

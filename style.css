@@ -1,4 +1,3 @@
-/* تنظیمات کلی */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body, html {
-    background-color: #000000; /* پس‌زمینه کاملاً مشکی */
+    background-color: #000000;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -23,20 +22,18 @@ body, html {
     align-items: center;
 }
 
-/* استایل فونت و ساعت */
 .clock-display {
-    /* استفاده از فونت Orbitron. اگر لود نشد، Courier New جایگزین می‌شود */
+    /* همان فونت Orbitron خوشگل بار اول */
     font-family: 'Orbitron', 'Courier New', monospace; 
     font-weight: 700;
-    color: #d4d4d4; /* رنگ طوسی روشن دقیقاً مثل عکس اول */
-    font-size: 25vw; /* سایز بسیار بزرگ که کل صفحه را پر می‌کند */
+    color: #d4d4d4;
+    font-size: 25vw; 
     letter-spacing: 8px;
     position: relative;
     display: flex;
     align-items: flex-start;
 }
 
-/* تنظیم AM/PM در بالای عدد */
 .ampm {
     font-size: 4vw;
     margin-top: 3vw;
