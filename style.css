@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #d4d4d4;
+    font-family: 'Vazirmatn', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    padding: 0 5%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* --- بخش چپ (ساعت) --- */
+.left-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1.2;
+    position: relative;
+}
+
+.alarm-icon {
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #d4d4d4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alarm-icon::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    width: 2px;
+    height: 8px;
+    background-color: #d4d4d4;
+    border-radius: 2px;
+}
+.alarm-icon::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 14px;
+    height: 2px;
+    background-color: #d4d4d4;
+}
+
+.clock-display {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11rem;
+    letter-spacing: 5px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ampm {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+/* --- بخش وسط (برج ایفل SVG) --- */
+.center-section {
+    flex: 1.5;
+    justify-content: center;
+    position: relative;
+}
+
+.center-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+}
+
+.eiffel-tower-svg {
+    height: 90%;
+    max-height: 750px;
+    width: auto;
+    opacity: 0.9;
+}
+
+/* --- بخش راست (آب و هوا) --- */
+.right-section {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    gap: 15px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #505050;
+    margin: 10px 0;
+}
+
+.date {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+.day {
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.weather-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.weather-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.city {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.status {
+    font-size: 1.8rem;
+}
+
+/* آیکون خورشید جدید */
+.sun-svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* آیکون دماسنج جدید */
+.temp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thermometer-svg {
+    width: 60px;
+    height: 60px;
+}
+
+.temp-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 100%;
+}
+
+.temp-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.unit {
+    font-size: 3.5rem;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+/* واکنش‌گرا برای موبایل */
+@media (max-width: 900px) {
+    .container { flex-direction: column; height: 100%; padding: 20px; justify-content: space-around; }
+    .left-section, .center-section, .right-section { flex: auto; width: 100%; align-items: center; }
+    .right-section { align-items: center; padding: 0; }
+    .date, .day, .city, .status { text-align: center; }
+    .clock-display { font-size: 6rem; }
+    .eiffel-tower-svg { height: auto; max-height: 350px; }
+    .temp-value { font-size: 5rem; }
+    .weather-row { flex-direction: column; }
+    .weather-text { align-items: center; padding: 0; }
+}

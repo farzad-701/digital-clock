@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساعت و آب و هوای دیجیتال</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- لینک فونت‌های گوگل برای دیجیتال و فارسی -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- بخش چپ: ساعت -->
+        <div class="section left-section">
+            <div class="alarm-icon">
+                <div class="alarm-bell"></div>
+            </div>
+            <div class="clock-display">
+                <span id="time">12:34</span>
+                <span class="ampm">PM</span>
+            </div>
+        </div>
+
+        <!-- بخش وسط: برج ایفل (با SVG جایگزین شد) -->
+        <div class="section center-section">
+            <svg class="eiffel-tower-svg" viewBox="0 0 200 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- خطوط اصلی برج -->
+                <path d="M 20 600 L 60 400 L 90 200 L 100 50 M 180 600 L 140 400 L 110 200 L 100 50" stroke="#d4d4d4" stroke-width="2.5" fill="none"/>
+                <!-- قوس پایین برج -->
+                <path d="M 20 600 Q 100 630 180 600" stroke="#d4d4d4" stroke-width="2.5" fill="none"/>
+                <path d="M 35 590 Q 100 610 165 590" stroke="#d4d4d4" stroke-width="1.5" fill="none"/>
+                
+                <!-- سکوهای برج -->
+                <rect x="40" y="390" width="120" height="10" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                <rect x="60" y="210" width="80" height="8" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                <rect x="75" y="75" width="50" height="5" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                
+                <!-- داربست‌های افقی -->
+                <line x1="35" y1="520" x2="165" y2="520" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="45" y1="460" x2="155" y2="460" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="55" y1="380" x2="145" y2="380" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="65" y1="300" x2="135" y2="300" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="75" y1="220" x2="125" y2="220" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="82" y1="150" x2="118" y2="150" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="90" y1="80" x2="110" y2="80" stroke="#d4d4d4" stroke-width="1"/>
+                
+                <!-- داربست‌های مورب -->
+                <line x1="20" y1="600" x2="60" y2="520" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="180" y1="600" x2="140" y2="520" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="60" y1="400" x2="90" y2="300" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="140" y1="400" x2="110" y2="300" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="90" y1="200" x2="100" y2="120" stroke="#d4d4d4" stroke-width="1"/>
+                <line x1="110" y1="200" x2="100" y2="120" stroke="#d4d4d4" stroke-width="1"/>
+                
+                <!-- نوک آنتن برج -->
+                <line x1="100" y1="20" x2="100" y2="0" stroke="#d4d4d4" stroke-width="2.5"/>
+                <line x1="97" y1="20" x2="103" y2="20" stroke="#d4d4d4" stroke-width="2.5"/>
+            </svg>
+        </div>
+
+        <!-- بخش راست: آب و هوا -->
+        <div class="section right-section">
+            <div class="info-row date-row">
+                <div class="date">۱۴۰۳/۰۳/۲۲</div>
+                <div class="day">سه شنبه</div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="info-row weather-row">
+                <div class="weather-icon">
+                    <!-- آیکون خورشید جدید با SVG -->
+                    <svg class="sun-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="4.5" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="#d4d4d4" stroke-width="2"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="#d4d4d4" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="weather-text">
+                    <div class="city">مشهد</div>
+                    <div class="status">آفتابی</div>
+                </div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="info-row temp-row">
+                <div class="temp-icon">
+                    <!-- آیکون دماسنج جدید با SVG -->
+                    <svg class="thermometer-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21a3 3 0 0 1 0-6 V4 h-1 v11 a3 3 0 0 1 0 6 z" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                        <circle cx="11.5" cy="19.5" r="1.5" stroke="#d4d4d4" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <div class="temp-value">
+                    <span id="temp">۳۲</span>°<span class="unit">c</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
